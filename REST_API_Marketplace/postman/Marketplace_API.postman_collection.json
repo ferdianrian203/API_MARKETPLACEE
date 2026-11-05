@@ -1,0 +1,47 @@
+{
+  "info": {
+    "name": "REST API Marketplace",
+    "_postman_id": "a9f6a6c2-47c0-4d75-a71b-7f38e94a5e11",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - Semua Produk",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost/REST_API_Marketplace/api/produk.php"
+      }
+    },
+    {
+      "name": "GET - Detail Produk ID 1",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost/REST_API_Marketplace/api/produk.php?id=1"
+      }
+    },
+    {
+      "name": "GET - Semua Kategori",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost/REST_API_Marketplace/api/kategori.php"
+      }
+    },
+    {
+      "name": "POST - Buat Pesanan",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama_pelanggan\": \"Budi\",\n  \"alamat\": \"Medan\",\n  \"items\": [\n    {\n      \"produk_id\": 1,\n      \"jumlah\": 2\n    },\n    {\n      \"produk_id\": 3,\n      \"jumlah\": 1\n    }\n  ]\n}"
+        },
+        "url": "http://localhost/REST_API_Marketplace/api/pesanan.php"
+      }
+    }
+  ]
+}
